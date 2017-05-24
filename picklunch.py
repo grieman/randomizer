@@ -11,7 +11,10 @@ def picklunch():
             print('That is not a valid option!')
         else:
             break
-
+        
+    print("Please wait - getting data ...")
+    samplesize = int(samplesize)
+    
     YOUR_API_KEY = 'AIzaSyA7_5HG1Zzf6RvgbTSOQhnkJ2O275U892o'
     
     google_places = GooglePlaces(YOUR_API_KEY)
@@ -59,14 +62,18 @@ def picklunch():
             print('That is not a valid option!')
         else:
             break
-        
+
+	
+    write == 'y'
     if write == True:
         # code to add line to csv
         with open('prior.csv', 'a') as f:
             writer = csv.writer(f, delimiter = ";")
             writer.writerow(todayschoice)
     
+    
     print(todayschoice)
+    time.sleep(10)
     
     return
 
