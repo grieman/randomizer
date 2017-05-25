@@ -3,6 +3,7 @@ def picklunch():
     from googleplaces import GooglePlaces, types, lang
     import numpy as np
     import csv
+    import time
     
     search_for = input('Search keyword:')
     while True:
